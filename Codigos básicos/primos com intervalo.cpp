@@ -1,4 +1,5 @@
 #include <iostream>
+//mostrar todos os primos de X ate <=N
 void quantidade_pares_impares(int n, int p, int resto, int c, int b)
 {
     for (int x = n; x <= p; x++)
@@ -13,7 +14,7 @@ void quantidade_pares_impares(int n, int p, int resto, int c, int b)
             b++;
         }
     }
-    printf("Quantidade de numeros POSITIVOS: %d\n", c);
+    printf("Quantidade de numeros PARES: %d\n", c);
     printf("Quantidade de numeros IMPARES: %d\n", b);
 }
 int quantidade_primos(int n, int p)
@@ -48,9 +49,12 @@ int main()
 {
     int c = 0, resto, b = 0;
     int n, p, contador = 0;
+    do
+    {
+        printf("Informe o intervalor [n,p]\n");
+        scanf("%d %d", &n, &p);
+    } while (n > p);
 
-    printf("Informe o intervalor [n,p]\n");
-    scanf("%d %d", &n, &p);
     system("clear");
     printf("Intervalo usado: %d <= X <= %d ou [%d,%d]\n\n", n, p, n, p);
     quantidade_pares_impares(n, p, resto, c, b);
