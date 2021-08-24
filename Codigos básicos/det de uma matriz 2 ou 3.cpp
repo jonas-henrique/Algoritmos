@@ -45,7 +45,7 @@ int main()
         b = (-1) * ((mat[1][0] * mat[2][2]) - (mat[1][2] * mat[2][0]));
         c = 1 * ((mat[1][0] * mat[2][1]) - (mat[2][0] * mat[1][1]));
         determinante = (mat[0][0] * a) + (mat[0][1] * b) + (mat[0][2] * c);
-        //formula:Cij = (-a)^i+j - Mij
+        //formula:Cij = (-1)^i+j - Mij
     }
 
     printf("\nDeterminante: %d\n", determinante);
